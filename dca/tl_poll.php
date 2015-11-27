@@ -149,7 +149,7 @@ $GLOBALS['TL_DCA']['tl_poll'] = array
 			'exclude'                 => true,
 			'search'                  => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>255),
+			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
 		),
 		'jumpId' => array
@@ -157,7 +157,7 @@ $GLOBALS['TL_DCA']['tl_poll'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_poll']['jumpId'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
-			'eval'                    => array('maxlength'=>255),
+			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
 		),
 		'type' => array
