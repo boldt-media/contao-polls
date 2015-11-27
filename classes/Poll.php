@@ -196,6 +196,27 @@ class Poll extends \Frontend
 		$objTemplate->options = $objWidget;
 		$objTemplate->submit = (!$blnActive || $blnHasVoted || ($this->objPoll->protected && !FE_USER_LOGGED_IN)) ? '' : $GLOBALS['TL_LANG']['MSC']['vote'];
 		$objTemplate->action = ampersand(\Environment::get('request'));
+		if ($this->objPoll->jumpId !== '')
+		{
+			$curURL = $objTemplate->action;
+
+			$pos = strpos($curURL, '?');
+			$prefix = $curURL;
+			$postfix = '';
+			if ($pos !== false)
+			{
+				$prefix = substr($curURL, 0, $pos);
+				$postfix = substr($curURL, $pos);
+			}
+
+			$pos = strpos($curURL, '#');
+			if ($pos !== false)
+			{
+				$prefix = substr($curURL, 0, $pos);
+			}
+
+			$objTemplate->action = $prefix . "#" . $this->objPoll->jumpId . $postfix;
+		}
 		$objTemplate->formId = $strFormId;
 		$objTemplate->hasError = $doNotSubmit;
 		$objTemplate->resultsLink = '';
