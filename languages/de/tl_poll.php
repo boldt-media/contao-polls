@@ -17,6 +17,7 @@
  * Fields
  */
 $GLOBALS['TL_LANG']['tl_poll']['title']                     = array('Titel', 'Bitte geben Sie den Titel der Umfrage ein.');
+$GLOBALS['TL_LANG']['tl_poll']['jumpId']                    = array('Sprung ID', 'Die ID zum springen.');
 $GLOBALS['TL_LANG']['tl_poll']['voteInterval']              = array('Interval zur Abstimmung', 'Hier können Sie in Sekunden angeben, wann der Benutzer erneut abstimmen kann. Setzen Sie eine 0, wenn nur einmalig abgestimmt werden darf.');
 $GLOBALS['TL_LANG']['tl_poll']['protected']                 = array('Umfrage schützen', 'Nur eingeloggte Benutzer dürfen abstimmen.');
 $GLOBALS['TL_LANG']['tl_poll']['featured']                  = array('Umfrage hervorheben', 'Die Umfrage im Frontend hervorheben.');
